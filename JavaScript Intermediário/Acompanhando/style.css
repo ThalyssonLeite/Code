@@ -1,0 +1,23 @@
+div {
+    color: aliceblue;
+    display: inline-block;
+    background: cornflowerblue;
+    padding: 20px;
+    border: 2px solid burlywood;
+    font-size: 2rem;
+}
+
+input {
+    display:block;
+    margin-bottom: 24.45px;
+}
+
+#first {
+    display: inline-block;
+    margin-bottom: 21.45px;
+}
+
+#second {
+    display: inline-block;
+    margin-bottom: 21.45px;
+}
