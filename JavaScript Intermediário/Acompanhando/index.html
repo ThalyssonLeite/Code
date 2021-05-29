@@ -7,17 +7,12 @@
         <title>Document</title>
         <script src="./script.js"></script>
     </head>
-    <body>
+    <body onload="console.log('Página carregada')">
 
-        <h1>Olá mundo!</h1>
-        
-        <input type="text" oninput="changeH1(this)">
+       <img src="https://uploads.spiritfanfiction.com/fanfics/historias/201510/fanfiction-originais-controle-dois-4647259-111020151939.jpg">
 
-        <div id="first" onclick="hideH1()">This is a button, click on it!</div>
+       <div onmouseover="onOver(this)" onmouseout="mouseOut(this)">Click</div>
 
-        <p></p>
-
-        <div id="second" onclick="hideH1()">This is a button, click on it!</div>
-
+       <p onmouseover="onOver(this)" onmouseout="mouseOut(this)">Texto para teste</p>
     </body>
 </html>

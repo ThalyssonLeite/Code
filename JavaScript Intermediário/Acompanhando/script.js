@@ -1,9 +1,7 @@
-function changeH1(userInput) {
-    let h1 = document.getElementsByTagName("h1")[0]
-    h1.innerText = userInput.value
+function onOver(element) {
+    element.style = "background: aliceblue; color: cornflowerblue"
 }
 
-function hideH1() {
-    let h1 = document.getElementsByTagName("h1")[0];
-    h1.style = "display: none;"
+function mouseOut(element) {
+    element.style = "background: cornflowerblue; color: aliceblue"
 }
