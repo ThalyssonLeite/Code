@@ -1,12 +1,8 @@
-function onOver(element) {
-    element.style = "background: aliceblue; color: cornflowerblue"
+function change() {
+let title = document.getElementById("title");
+title.onclick = changeTitleText;
 }
 
-function mouseOut(element) {
-    element.style = "background: cornflowerblue; color: aliceblue"
-}
-
-function hideImage() {
-    let image = document.getElementsByTagName("img")[0];
-    image.style = "display: none";
+function changeTitleText() {
+    this.innerHTML = "Novo Texto"
 }
