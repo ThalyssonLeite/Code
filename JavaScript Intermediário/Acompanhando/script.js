@@ -1,11 +1,17 @@
 window.onload = function() {
-    let firstDiv = document.getElementById("firstDiv");
-    let secondDiv = document.getElementById("secondDiv").children[0];
+    let h1 = document.getElementsByTagName("h1");
+    
+    for (let h of h1) {
+        console.log(h);
 
-    let firstDivChildren = firstDiv.children[1];
-    let secondDivParent = secondDiv.parentElement;
+        h.addEventListener("click", whoIsTheFather);
+    }
 
-    console.log(firstDivChildren)
-    console.log(secondDivParent)
+    function whoIsTheFather(e) {
+        let target = e.target;
+        let parent = target.parentElement;
+
+        console.log(parent);
+    }
 }
 
