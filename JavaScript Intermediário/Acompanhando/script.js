@@ -1,11 +1,11 @@
-function loaded() {
-    let t1 = document.getElementById("t1");
-    let t2 = document.getElementById("t2");
+window.onload = function() {
+    let firstDiv = document.getElementById("firstDiv");
+    let secondDiv = document.getElementById("secondDiv").children[0];
 
-    t1.addEventListener("click", transformToUpperCase);
-    t2.addEventListener("click", transformToUpperCase);
+    let firstDivChildren = firstDiv.children[1];
+    let secondDivParent = secondDiv.parentElement;
+
+    console.log(firstDivChildren)
+    console.log(secondDivParent)
 }
 
-function transformToUpperCase() {
-    this.innerHTML = this.innerHTML.toUpperCase();
-}
