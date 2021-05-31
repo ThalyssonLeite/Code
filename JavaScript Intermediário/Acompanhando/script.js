@@ -1,29 +1,20 @@
-onload = function() {
-    let h1 = document.getElementsByTagName("h1")[0];
-    let choosenOne = localStorage.getItem("choosenOne")
-    h1.innerHTML = choosenOne
-    let button = document.getElementsByTagName("button")[0];
+let number = 0;
 
-    let h1Verify = h1.innerText;
-    let emptyString = "";
+function changeTitleText() {
+    let h1 = document.getElementById("title");
+    h1.innerHTML = "New title"
 
-    if (h1Verify > emptyString) {
-        button.style = "display: none"
-    }
+    setTimeout(changeTitleColor, 300);
+    setInterval(titleSum, 0)
 }
 
-let peopleInRaffle = ["Thalysson", "Thayssa", "Junior", "Edilza", "Maya"]
+function changeTitleColor() {
+    let h1 = document.getElementById("title");
+    h1.style = "color: blue"
+}
 
-function raffle(button) {
-
-    let numberOfPeopleInRaffle = peopleInRaffle.length;
-
-    let raffledPerson = Math.floor(Math.random() * numberOfPeopleInRaffle);
-    
-    let h1 = document.getElementsByTagName("h1")[0];
-    h1.innerHTML = peopleInRaffle[raffledPerson];
-
-    localStorage.setItem("choosenOne", h1.innerHTML)
-
-    button.style = "display: none"
+function titleSum() {
+    let h1 = document.getElementById("title");
+    h1.innerHTML += " " + number;
+    number++;
 }
