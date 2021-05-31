@@ -19,8 +19,7 @@ function raffle(button) {
     let numberOfPeopleInRaffle = peopleInRaffle.length;
 
     let raffledPerson = Math.floor(Math.random() * numberOfPeopleInRaffle);
-    console.log(numberOfPeopleInRaffle)
-
+    
     let h1 = document.getElementsByTagName("h1")[0];
     h1.innerHTML = peopleInRaffle[raffledPerson];
 
