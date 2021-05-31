@@ -5,9 +5,10 @@ onload = function() {
     h1.innerHTML = name
 }
 
-function update(element) {
+function update() {
     let h1 = document.getElementsByTagName("h1")[0]
-    let userInput = element.value
+    let input = document.getElementsByTagName("input")[0]
+    let userInput = input.value
 
     h1.innerHTML = userInput
 
