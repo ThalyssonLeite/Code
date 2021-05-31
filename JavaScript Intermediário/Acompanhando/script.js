@@ -1,17 +1,30 @@
 onload = function() {
     let h1 = document.getElementsByTagName("h1")[0];
-    let name = localStorage.getItem("name");
+    let choosenOne = localStorage.getItem("choosenOne")
+    h1.innerHTML = choosenOne
+    let button = document.getElementsByTagName("button")[0];
 
-    h1.innerHTML = name
+    let h1Verify = h1.innerText;
+    let emptyString = "";
+
+    if (h1Verify > emptyString) {
+        button.style = "display: none"
+    }
 }
 
-function update() {
-    let h1 = document.getElementsByTagName("h1")[0]
-    let input = document.getElementsByTagName("input")[0]
-    let userInput = input.value
+let peopleInRaffle = ["Thalysson", "Thayssa", "Junior", "Edilza", "Maya"]
 
-    h1.innerHTML = userInput
+function raffle(button) {
 
-    localStorage.setItem("name", userInput)
-    
+    let numberOfPeopleInRaffle = peopleInRaffle.length;
+
+    let raffledPerson = Math.floor(Math.random() * numberOfPeopleInRaffle);
+    console.log(numberOfPeopleInRaffle)
+
+    let h1 = document.getElementsByTagName("h1")[0];
+    h1.innerHTML = peopleInRaffle[raffledPerson];
+
+    localStorage.setItem("choosenOne", h1.innerHTML)
+
+    button.style = "display: none"
 }
