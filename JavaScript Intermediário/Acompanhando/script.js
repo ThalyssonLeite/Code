@@ -1,19 +1,19 @@
 let number = 0;
+let interval;
 
-function changeTitleText() {
+function start() {
     let h1 = document.getElementById("title");
-    h1.innerHTML = "New title"
-
-    setTimeout(changeTitleColor, 300);
-    setInterval(titleSum, 0)
+    interval = setInterval(changeTitle, 1000)
+    if (!(h1.innerText.includes("New"))) {
+        h1.innerHTML = "New title"
+    }
 }
 
-function changeTitleColor() {
-    let h1 = document.getElementById("title");
-    h1.style = "color: blue"
+function stop() {   
+    clearInterval(interval);
 }
 
-function titleSum() {
+function changeTitle() {
     let h1 = document.getElementById("title");
     h1.innerHTML += " " + number;
     number++;
