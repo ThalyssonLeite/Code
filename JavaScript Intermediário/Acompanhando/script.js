@@ -1,9 +1,16 @@
-let image = document.getElementById("like");
-image.addEventListener("click", changeImage);
+let unorderedList = document.getElementById("unorderedList");
+let unorderedListElements = parseInt(unorderedList.getAttribute("num"));
 
-function changeImage() {
-    let firstImage = image.getAttribute("src");
-    image.setAttribute("src", "./imagens/thumbsDown.png"); 
+let content = "";
 
-    console.log(firstImage)
+function createLists() {
+    for (let counter = 0; counter < (unorderedListElements + 1); counter++) {
+
+        content += `<li>${counter}</li>
+        `;
+    }
+
+    unorderedList.innerHTML = content;
 }
+
+
