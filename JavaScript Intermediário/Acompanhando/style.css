@@ -1,14 +1,9 @@
-#container {
-    width: 500px;
-    height: 500px;
+#screen {
     background: bisque;
-    position: relative;
-    overflow: hidden;
 }
 
-#square {
-    background: red;
-    width: 20px;
-    height: 20px;
-    position: absolute;
+div {
+    background: blue;
+    width: 500px;
+    height: 500px;
 }
