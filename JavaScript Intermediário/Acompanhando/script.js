@@ -1,22 +1,17 @@
 let canvas = document.getElementById("canvas");
-let canvasContext = canvas.getContext("2d");
+let context = canvas.getContext("2d");
 
-canvasContext.beginPath();
 
-canvasContext.lineWidth = 5;
-canvasContext.strokeStyle = "red";
-canvasContext.moveTo(0, 0);
-canvasContext.lineTo(400, 300);
-canvasContext.stroke();
+context.beginPath();
 
-canvasContext.beginPath();
+context.strokeStyle = "red";
+context.arc(250, 250, 25, 0, 2 * Math.PI)
+context.stroke();
 
-canvasContext.lineWidth = 7;
-canvasContext.strokeStyle = "blue";
-canvasContext.fillStyle = "green";
-canvasContext.moveTo(250, 30);
-canvasContext.lineTo(300, 300);
-canvasContext.lineTo(200, 300);
-canvasContext.closePath();
-canvasContext.stroke();
-canvasContext.fill();
+context.beginPath();
+
+context.strokeStyle = "green";
+context.moveTo(225.5, 175);
+context.lineTo(275.5, 175);
+context.closePath();
+context.stroke();
