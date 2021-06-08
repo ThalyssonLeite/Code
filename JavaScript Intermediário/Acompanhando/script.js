@@ -1,32 +1,22 @@
 let canvas = document.getElementById("canvas");
-
 let canvasContext = canvas.getContext("2d");
 
+canvasContext.beginPath();
 
-const blueSquare = () => {
-canvasContext.fillStyle = "blue";
-
-// In general, the first two arguments represent the X and Y (axis) padding and the other two arguments that comes after them represents the normal width and height properties.
-canvasContext.fillRect(10, 10, 200, 200);
-}
-
-const drawnBlueSquare = () => {
-canvasContext.strokeStyle = "blue";
-canvasContext.lineWidth = 10;
-canvasContext.strokeRect(220, 10, 200, 200);
-}
-
-const bordedBlueSquare = () => {
-canvasContext.rect(15, 230, 200, 200);
-canvasContext.fillStyle = "blue";
-canvasContext.lineWidth = 10;
-canvasContext.strokeStyle = "cornflowerblue";
-canvasContext.fill();
+canvasContext.lineWidth = 5;
+canvasContext.strokeStyle = "red";
+canvasContext.moveTo(0, 0);
+canvasContext.lineTo(400, 300);
 canvasContext.stroke();
-}
 
-bordedBlueSquare();
-blueSquare();
-drawnBlueSquare();
+canvasContext.beginPath();
 
-canvasContext.clearRect(30, 30, 50, 50);
+canvasContext.lineWidth = 7;
+canvasContext.strokeStyle = "blue";
+canvasContext.fillStyle = "green";
+canvasContext.moveTo(250, 30);
+canvasContext.lineTo(300, 300);
+canvasContext.lineTo(200, 300);
+canvasContext.closePath();
+canvasContext.stroke();
+canvasContext.fill();
