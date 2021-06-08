@@ -1,7 +1,10 @@
 #canvas {
     background: bisque;
     border: 5px solid blue;
+}
 
+img {
+    display: none;
 }
 
 
