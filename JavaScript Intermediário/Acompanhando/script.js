@@ -2,16 +2,46 @@ let canvas = document.getElementById("canvas");
 let context = canvas.getContext("2d");
 
 
-context.beginPath();
 
-context.strokeStyle = "red";
-context.arc(250, 250, 25, 0, 2 * Math.PI)
-context.stroke();
+let circle = {
+    x: 250,
+    y: 250,
+    radius: 100,
+    start: 0,
+    end:0 * Math.PI,
+    counterClockise: true,
+}
 
-context.beginPath();
+function drawCircle(c) {
+    {
+        context.beginPath();
 
-context.strokeStyle = "green";
-context.moveTo(225.5, 175);
-context.lineTo(275.5, 175);
-context.closePath();
-context.stroke();
+        context.rect(0, 0, 500, 500);
+        context.fillStyle = "beige";
+        context.fill();
+    }
+
+    {
+        context.beginPath();
+
+        context.strokeStyle = "red";
+        context.lineWidth = 5;
+        context.fillStyle = "blue";
+        context.arc(c.x, c.y, c.radius, c.start, c.end, c.counterClockwise);
+        context.closePath();
+        context.stroke();
+        context.fill();
+    }
+}
+
+setInterval(animateCircle, 0);
+
+function animateCircle() {
+    if (circle.end < 2 * Math.PI) {
+        circle.end += 0.01;
+        circle.x += 0.1;
+        console.log(circle.end)
+    } 
+
+    drawCircle(circle);
+}
