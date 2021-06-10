@@ -1,2 +1,12 @@
-let color = getComputedStyle(document.querySelector('p'), '::selection').getPropertyValue('background-color')
-console.log(color)
+let attribute = document.querySelectorAll("[width]");
+
+console.log(attribute[0], attribute[1]);
+
+
+
+
+
+
+
+
+

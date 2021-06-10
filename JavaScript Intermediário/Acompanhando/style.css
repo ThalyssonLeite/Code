@@ -1,21 +1,60 @@
-p::first-letter {
+body{
+    font-family:"Helvetica Rounded";
+}
+
+body::selection {
+    color: black;
+}
+
+header > p::first-letter {
     color: red;
-    font-size:1.5rem;
 }
 
-p::first-line {
-    color: blue;
-}
-
-ul {
-    list-style: none;
-}
-
-li::before {
-    content: 'True ' ;
-}
-
-p::selection {
-    background: #3390FF;
+/* All the P's inside the DIV tag */
+div p {
+    background-color: cornflowerblue;
     color: white;
 }
+
+/* All the the P's that are really the sons of the HEADER */
+header > p {
+    background-color:lawngreen;
+    color: white;
+}
+
+/* All the P's that comes right after the #firstDiv */
+#firstDiv + p {
+    background-color: beige;
+    color: darkslategrey;
+}
+
+/* All the .extraP that comes right after of the #firsDiv*/
+#firstDiv ~ .extraP {
+    background-color: lightcoral;
+    color: white;
+}
+
+/* All the elements that have the property width as an attribute */
+[width] {
+ background-color: lightseagreen;
+ color: white;
+}
+
+/* All the elements that have the specifc property width="500" as an attribute */
+[width="500"] {
+    background-color:darkslateblue;
+    color: white;
+}
+
+/* Another types of selectors:
+    { 
+        *[attribute~="value"] It will be applied to every element that has an attribute with a value that corresponds to the string in the field "value", 
+        
+        *[attribute^="v"] It will be applied to every element that has an attribute with a value that starts with "v", 
+        
+        *[attribute$="0"] It will be applied to every element that has an attribute in wich the value string ends with the character "1",
+
+        *[attribute*="value"] It will be applied to every element that it finds in the value of the attribute the string "value", 
+    } */
+
+    
