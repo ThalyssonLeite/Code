@@ -1,31 +1,34 @@
 * {
-    outline: none;
-    font-family: monospace;
-    font-size: 32px;
+    margin: 0;
+    padding: 0;
 }
 
-input:focus {
-    color: red;
+.container {
+    position: relative;
+    background-color: darkblue;
+    width: 100%;
+    height: 600px;
 }
-    
-/* First child of the parent Element, there's the last-child too */
-li:first-child {
+
+.first {
+    display: inline-block;
+    background-color: goldenrod;
+    width: calc(100% - 300px);
+    height: 300px;
+}
+
+.second {
+    display: inline-block;
+    background-color: darkolivegreen;
+    width: 300px;
+    height: 300px;
+}
+
+h1 {
+    font-family: "Helvetica Rounded";
     color: white;
-}
-
-/* First child of it's type */
-li:first-of-type {
-    background-color:darkslateblue;
-}
-
-/* It will be applied to the "number" child in wich the element selected is */
-li:nth-child(2) {
-    background-color: black;
-    color: white;
-}
-
-/* It will be applied to the "number" child of the same type of the choosen element */
-li:nth-of-type(3) {
-    background-color: darkred;
-    color: white;
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
