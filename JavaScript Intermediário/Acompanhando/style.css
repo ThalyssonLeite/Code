@@ -1,31 +1,21 @@
-:root {
-    --squareSize: 300px;
+.container {
+    color: white;
+    display: grid;
+    padding: 10px;
+    background-color: darkslategrey;
+
+    grid-template-rows: auto auto;
+    grid-template-columns: 10% 150px auto;
 }
 
-#container {
-    color: white; 
-    display: flex;
-    /* flex-flow: wrap; */
-    Background-color: gray;
-    height: 592px;
-}
-
-.rectangle {
-    width: var(--squareSize);
-    height: 100px;
-}
-
-.r1 {
+.red {
     background-color: red;
 }
 
-.r2 {
+.blue {
     background-color: blue;
 }
 
-.r3 {
+.green {
     background-color: green;
-    flex-shrink: 0;
 }
-
-
