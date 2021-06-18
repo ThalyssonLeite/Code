@@ -4,12 +4,15 @@
     padding: 10px;
     background-color: darkslategrey;
 
-    grid-template: auto auto / 10% 150px auto;
+    grid-template: auto auto / auto auto auto;
 
     grid-gap: 10px;
 
     /* grid-row-gap: 10px;
     grid-column-gap: 10px; */
+
+    justify-items: center;
+    align-items: center;
 }
 
 .red {
@@ -22,4 +25,14 @@
 
 .green {
     background-color: green;
+}
+
+.rect {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 7px;
 }
