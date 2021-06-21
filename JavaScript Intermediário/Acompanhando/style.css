@@ -7,10 +7,10 @@
         background-color: yellow;
         width: 300px;
     } 50% {
-        background-color: blue;
+        background-color: green;
         width: 400px;
     } 100% {
-        background-color: green;
+        background-color: blue;
         width: 200px;
     }
 }
@@ -20,7 +20,9 @@
     height: 200px;
     border-style: solid;
     animation-name: changeColor;
-    animation-duration: 5s;
-    animation-delay: -2.5s;
-    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    /* animation-direction: alternate-reverse; */
+    /* animation-iteration-count: infinite; */
+    animation-fill-mode: both;
 }
