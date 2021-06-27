@@ -1,12 +1,17 @@
-let attribute = document.querySelectorAll("[width]");
+function speakGeneric() {
+    console.log(this.sound)
+}
 
-console.log(attribute[0], attribute[1]);
+let dog = {
+    sound: "ow",
+    speak: speakGeneric
+}
 
+let cat = {
+    sound: "miaw",
+    speak: speakGeneric
+}
 
+let bindedFunction = speakGeneric.bind(dog);
 
-
-
-
-
-
-
+bindedFunction();
