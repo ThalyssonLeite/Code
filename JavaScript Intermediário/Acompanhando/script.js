@@ -1,32 +1,20 @@
-let users = ["Adriano", "Marcia", "Jose"];
+function newStudent(name, age) {
 
-function insertUser(name) {
-
-    let promise = new Promise(function(resolve, reject) {
-        setTimeout(function() {
-            users.push(name);
-
-            let error = 0;
-
-            if (!error) {
-                resolve()
-            } else {
-                reject({msg: "Something wrong is not right"})
-            }
-
-        }, 500)
-    })
-
-    return promise
+    return {name, age}
 }
 
-function printUsers() {
-    console.log(users)
+let students = [
+    newStudent("Thalysson", 17),
+    newStudent("Thayssa", 14),
+    newStudent("Junior", 41)
+]
+
+let isItUnder30 = function(aluno) {
+    return aluno.age < 30
 }
 
-async function execute() {
-    await insertUser("Thalysson");
-    printUsers()
+let isItOver30 = function(aluno) {
+    return aluno.age > 30
 }
 
-execute()
+console.log(students.filter(isItUnder30));
