@@ -9,13 +9,8 @@ let students = [
     newStudent("Junior", 41)
 ]
 
-function nameAndAge(student) {
-    return {
-        name: student.name,
-        age: student.age
-    }
+function classAge(total, student) {
+    return total + student.age;
 }
 
-
-
-console.log(students.map(nameAndAge));
+console.log(students.reduce(classAge, 0));
