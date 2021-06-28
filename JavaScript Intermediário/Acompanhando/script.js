@@ -9,12 +9,13 @@ let students = [
     newStudent("Junior", 41)
 ]
 
-let isItUnder30 = function(aluno) {
-    return aluno.age < 30
+function nameAndAge(student) {
+    return {
+        name: student.name,
+        age: student.age
+    }
 }
 
-let isItOver30 = function(aluno) {
-    return aluno.age > 30
-}
 
-console.log(students.filter(isItUnder30));
+
+console.log(students.map(nameAndAge));
