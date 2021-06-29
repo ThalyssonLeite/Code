@@ -1,16 +1,22 @@
-function newStudent(name, age) {
+let url = "https://economia.awesomeapi.com.br/last/USD-BRL";
 
-    return {name, age}
+
+function convert() {
+
+fetch(url).then(function(response) {
+    return response.json()
+}).then(function(data) {
+    
+    let BRL = data.USDBRL.ask;
+
+    let input = document.getElementById("BRL");
+    let USD = input.value;
+
+    let h2 = document.getElementsByTagName("h2")[0];
+    
+    let result = USD * BRL;
+    
+    h2.innerHTML = `US$ ${USD} = R$ ${result.toFixed(2)}`;
+})
+
 }
-
-let students = [
-    newStudent("Thalysson", 17),
-    newStudent("Thayssa", 14),
-    newStudent("Junior", 41)
-]
-
-function classAge(total, student) {
-    return total + student.age;
-}
-
-console.log(students.reduce(classAge, 0));
