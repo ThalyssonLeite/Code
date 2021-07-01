@@ -10,6 +10,3 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-form {
-    overflow: scroll;
-}
